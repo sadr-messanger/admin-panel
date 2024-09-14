@@ -19,4 +19,4 @@ RUN npm run build
 # Step 7: Use a lighter image for serving the app
 
 # Step 10: Start nginx
-CMD ["", "npm run preview"]
+CMD npm run preview
