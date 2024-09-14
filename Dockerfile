@@ -17,13 +17,6 @@ COPY . .
 RUN npm run build
 
 # Step 7: Use a lighter image for serving the app
-FROM nginx:alpine
-
-# Step 8: Copy the built app from the previous stage to the nginx directory
-COPY --from=build /app/dist /usr/share/nginx/html
-
-# Step 9: Expose the port that nginx will run on
-EXPOSE 80
 
 # Step 10: Start nginx
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["npm", "run preview"]
