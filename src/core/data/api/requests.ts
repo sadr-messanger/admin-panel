@@ -13,7 +13,7 @@ function makeid(length:number) {
 }
 
 export async function login(username: string, password: string) {
-    const req = await client.post(`${import.meta.env.VITE_API_URL}/_matrix/client/r0/login`, { 
+    const req = await client.post(`${"https://sadr-neshan.ir"}/_matrix/client/r0/login`, { 
         "device_id": makeid(10), 
         "initial_device_display_name": "Synapse Admin", 
         "type": "m.login.password", 
